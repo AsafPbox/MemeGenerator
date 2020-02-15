@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Lobster|Permanent+Marker|Righteous&display=swap');
+
+/* Base */
+
+html {
+    background-color: lightgray;
+    font-family: impact;
+}
+
+body {
+    margin: 0;
+    font-size: 1.125rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: darkgreen;
+}
+
+.nav-container a:hover {
+    padding: 10px;
+    border: darkgreen 2px solid;
+    border-radius: 12px;
+}
+
+button {
+    border: none;
+    margin: 5px;
+    text-decoration: none;
+    background-color: inherit;
+    color: darkgreen;
+    font-size: 0.9375rem;
+}
+
+button:hover {
+    border: darkgreen 2px solid;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+input {
+    margin: 10px 10px;
+    align-self: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-height: 80px;
+    grid-template-columns: 30% 60% 10%;
+    grid-template-rows: 100%;
+    background-color: black;
+}
+
+.logo {
+    place-self: center;
+    font-size: 1.625rem;
+    color: darkgreen;
+    grid-column: 1 / 2;
+    font-family: 'Righteous', cursive;
+}
+
+.nav-buttons {
+    grid-column: 2 / 3;
+    max-height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    padding: 0px;
+    font-family: 'Righteous', cursive;
+}
+
+.nav-buttons li {
+    list-style-type: none;
+    place-self: center;
+}
+
+.menu-btn {
+    grid-column: 3 / 4;
+}
+
+.image-gallery {
+    margin: 5px 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.MemeGen {
+    margin: 5px 50px;
+    grid-template-columns: 60% 40%;
+}
+
+canvas {
+    display: block;
+    padding: 0px 10px 0px;
+}
+
+#my-canvas {
+    max-width: 100%;
+}
+
+.canvas-buttons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: darkgreen 2px solid;
+    border-radius: 10px;
+    max-width: 100%;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(4, 100px);
+}
+
+.canvas-buttons a {
+    text-decoration: none;
+    font-size: 0.9375rem;
+}
+
+#downloadMeme {
+    border: none;
+    margin: 0;
+    text-decoration: none;
+}
+
+#inputLine {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 10px 10px;
+}
+
+#switchLine {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+#moveLineUp {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#moveLineDown {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#increaseFontSize {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+
+#decreaseFontSize {
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+}
+
+#setColor {
+    place-self: center;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+#setAlignCenter {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+#setAlignLeft {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+#setAlignRight {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+
+#shareMeme {
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+#saveMeme {
+    grid-column: 4 / -1;
+    grid-row: 4 / 5;
+}
+
+#downloadMeme {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    align-self: center;
+    text-align: center;
+}
+
+footer {
+    min-height: 50px;
+    background-color: black;
+    color: darkgreen;
+    text-align: center;
+    font-size: 1.625rem;
+    align-self: center;
+    font-family: 'Lobster', cursive;
+}
+
+@media (max-width: 600px) {
+    .nav-container {
+        width: 100%;
+        min-height: 100px;
+        grid-template-columns: 70% 0% 30%;
+        grid-template-rows: 100%;
+        background-color: black;
+    }
+
+    .nav-buttons {
+        grid-template-columns: 100vw;
+        grid-template-rows: 100px 100px 100px 600px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translate(100%, 0);  
+        transition:  transform .8s, box-shadow .3s;
+        background-color: black;
+        margin-top: 0px;
+        border: darkgreen 4px solid;
+        border-radius: 12px;
+    }
+
+    .menu-open .nav-buttons {
+        transform: translate(0, 0);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .MemeGen { 
+        grid-template-columns: 100%;
+        gap: 5px;
+        margin: 5px 5px;
+    }
+    .canvas-buttons {
+        grid-template-rows: repeat(4, 1fr);
+        margin: 0px;
+    }
+}
+
+/* Helpers */
+
+.grid {
+    display: grid;
+}
