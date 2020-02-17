@@ -254,7 +254,7 @@ canvas {
 }
 
 #shareMeme {
-    background:url('icons/facebook.png') no-repeat;
+    background:url('/icons/facebook.png') no-repeat;
     background-position: center; 
     grid-column: 1 / 3;
     grid-row: 4 / 5;
