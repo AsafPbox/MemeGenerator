@@ -95,9 +95,6 @@ function writeLine() {
             gMeme.lines[1].txt = this.value;
         }
         drawImg()
-        // } else if (gMeme.selectedLineIdx === 1) {
-        //     gMeme.lines[1].txt = this.value;
-        //     drawImg() 
     });
 }
 
@@ -194,12 +191,22 @@ function shareMeme(event) { // not working yet
 function openGallery() {
     document.querySelector('.image-gallery').style.display = 'grid';
     document.querySelector('.MemeGen').style.display = 'none';
+    document.querySelector('.about').style.display = 'none';
     document.body.classList.remove('menu-open');
+}
+
+
+function openAbout(){ // need to improve function to detect which model is open
+    document.body.classList.remove('menu-open');
+    document.querySelector('.image-gallery').style.display = 'none';
+    document.querySelector('.MemeGen').style.display = 'none';
+    document.querySelector('.about').style.display = 'grid';
 }
 
 function openGenerator() { // note : need to continue;
     document.body.classList.remove('menu-open');
     document.querySelector('.image-gallery').style.display = 'none'
+    document.querySelector('.about').style.display = 'none';
     document.querySelector('.MemeGen').style.display = 'grid';
     if (gCurrentImgSrc === undefined) {
         gCurrentImgSrc = document.querySelectorAll('img')[0].src;

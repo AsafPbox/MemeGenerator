@@ -3,6 +3,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Lobster|Permanent+Marker|Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Bangers|Chewy|Fugaz+One|Gloria+Hallelujah|Luckiest+Guy|Monoton|Orbitron|Rubik+Mono+One|Shrikhand&display=swap');
 
 /* Base */
 
@@ -19,12 +20,12 @@ body {
 a {
     text-decoration: none;
     font-size: 1.5rem;
-    color: darkgreen;
+    color: #66FCF1;
 }
 
 .nav-container a:hover {
     padding: 10px;
-    border: darkgreen 2px solid;
+    border: #66FCF1 2px solid;
     border-radius: 12px;
 }
 
@@ -33,12 +34,12 @@ button {
     margin: 5px;
     text-decoration: none;
     background-color: inherit;
-    color: darkgreen;
+    color: #66FCF1;
     font-size: 0.9375rem;
 }
 
 button:hover {
-    border: darkgreen 2px solid;
+    border: #66FCF1 2px solid;
     border-radius: 12px;
     padding: 10px;
 }
@@ -53,15 +54,16 @@ input {
     max-height: 80px;
     grid-template-columns: 30% 60% 10%;
     grid-template-rows: 100%;
-    background-color: black;
+    background-color: #1A1A1D;
 }
 
 .logo {
     place-self: center;
     font-size: 1.625rem;
-    color: darkgreen;
+    color: #66FCF1;
     grid-column: 1 / 2;
-    font-family: 'Righteous', cursive;
+    /* font-family: 'Righteous', cursive; */
+    font-family: 'Luckiest Guy', cursive;
 }
 
 .nav-buttons {
@@ -93,7 +95,59 @@ input {
     object-fit: cover;
 }
 
+.image-gallery img:hover {
+    cursor: pointer;
+    /* border: #66FCF1 2px solid; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about {
+    height: 780px;
+    padding: 10px 50px;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, 100px);
+    align-content: center;
+}
+
+.about img {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    max-height: 100%;
+    place-self: center;
+    border-radius: 15%;
+}
+
+.about h4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.125rem;
+}
+
+.about p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1rem;
+}
+
+.about .facebookLnk {
+    background:url('/icons/facebook.png') no-repeat;
+    background-position: left; 
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+
+}
+
+.about .linkdinLnk {
+    background:url('../icons/linkedin.png') no-repeat left center;
+    background-position: left; 
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
 .MemeGen {
+    /* height: 100vh; */
     margin: 5px 50px;
     grid-template-columns: 60% 40%;
 }
@@ -110,7 +164,7 @@ canvas {
 .canvas-buttons {
     margin-top: 50px;
     margin-bottom: 50px;
-    border: darkgreen 2px solid;
+    border: #66FCF1 2px solid;
     border-radius: 10px;
     max-width: 100%;
     grid-template-columns: repeat(5, 20%);
@@ -135,84 +189,114 @@ canvas {
 }
 
 #switchLine {
+    background:url('../icons/change.png') no-repeat;
+    background-position: center; 
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
 
 #moveLineUp {
+    background:url('../icons/up.png') no-repeat;
+    background-position: center; 
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
 
 #moveLineDown {
+    background:url('../icons/down.png') no-repeat;
+    background-position: center; 
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 }
 
 #increaseFontSize {
+    background:url('../icons/plus.png') no-repeat;
+    background-position: center; 
     grid-column: 4 / 5;
     grid-row: 2 / 3;
 }
 
 #decreaseFontSize {
+    background:url('../icons/minus.png') no-repeat;
+    background-position: center; 
     grid-column: 5 / 6;
     grid-row: 2 / 3;
 }
 
 #setColor {
-    place-self: center;
+    /* border: none;
+    background-color: inherit;
+    background:url('../icons/paint.png') no-repeat;
+    background-position: center;  */
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    place-self: center;
 }
 
 #setAlignCenter {
+    background:url('../icons/align_center.png') no-repeat;
+    background-position: center; 
     grid-column: 3 / 4;
     grid-row: 3 / 4;
 }
 
 #setAlignLeft {
+    background:url('../icons/align_left.png') no-repeat;
+    background-position: center; 
     grid-column: 2 / 3;
     grid-row: 3 / 4;
 }
 #setAlignRight {
+    background:url('../icons/align_right.png') no-repeat;
+    background-position: center; 
     grid-column: 4 / 5;
     grid-row: 3 / 4;
 }
 
 #shareMeme {
+    background:url('../icons/facebook.png') no-repeat;
+    background-position: center; 
     grid-column: 1 / 3;
     grid-row: 4 / 5;
 }
 
 #saveMeme {
+    background:url('../icons/save.png') no-repeat;
+    background-position: center; 
     grid-column: 4 / -1;
     grid-row: 4 / 5;
 }
 
 #downloadMeme {
+    background:url('../icons/download.png') no-repeat;
+    background-position: center; 
     grid-column: 3 / 4;
     grid-row: 4 / 5;
-    align-self: center;
-    text-align: center;
+
 }
 
 footer {
     min-height: 50px;
-    background-color: black;
-    color: darkgreen;
+    background-color: #1A1A1D;
+    /* color: #6F2232; */
     text-align: center;
     font-size: 1.625rem;
     align-self: center;
-    font-family: 'Lobster', cursive;
+    font-family: 'Luckiest Guy', cursive;
 }
 
 @media (max-width: 600px) {
+
+    .nav-container #menu-btn {
+        display: block;
+    }
+
     .nav-container {
         width: 100%;
         min-height: 100px;
         grid-template-columns: 70% 0% 30%;
         grid-template-rows: 100%;
-        background-color: black;
+        background-color: #1A1A1D;
     }
 
     .nav-buttons {
@@ -223,13 +307,15 @@ footer {
         top: 0;
         transform: translate(100%, 0);  
         transition:  transform .8s, box-shadow .3s;
-        background-color: black;
+        background-color: #1A1A1D;
         margin-top: 0px;
-        border: darkgreen 4px solid;
+        border: #66FCF1 4px solid;
         border-radius: 12px;
     }
 
     .menu-open .nav-buttons {
+        width: 100%;
+        height: 100%;
         transform: translate(0, 0);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
     }
@@ -243,6 +329,51 @@ footer {
         grid-template-rows: repeat(4, 1fr);
         margin: 0px;
     }
+
+    .about {
+        grid-template-columns: 100%;
+        grid-template-rows: 40% 10% 30% 10% 10%;
+        justify-content: center;
+    }
+
+    .about img {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        max-height: 100%;
+        place-self: center;
+        border-radius: 15%;
+    }
+    
+    .about h4 {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        margin: 0px;
+        place-self: center;
+    }
+    
+    .about p {
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
+        font-family: 'Luckiest Guy', cursive;
+    }
+    
+    .about .facebookLnk {
+        background:url('/icons/facebook.png') no-repeat;
+        background-position: left; 
+        grid-column: 1 / -1;
+        grid-row: 4 / 5;
+        background-position: center; 
+
+    }
+    
+    .about .linkdinLnk {
+        background:url('../icons/linkedin.png') no-repeat left center;
+        background-position: left; 
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        background-position: center; 
+    }
+
 }
 
 /* Helpers */

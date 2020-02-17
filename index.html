@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>UltimateMemeCreator</title>
+    <link rel="icon" href="icons/siteIcon.png">
 </head>
 
 <body onload="init()">
@@ -15,9 +16,9 @@
         <ul class="nav-buttons grid">
             <li><a onclick="openGallery()" href="#">Gallery</a></li>
             <li><a onclick="openGenerator()" href="#">Generator</a></li>
-            <li><a href="https://www.facebook.com/asaf.perez.31">About</a></li>
+            <li><a onclick="openAbout()" href="#">About</a></li>
         </ul>
-        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <button class="menu-btn" id="menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
     <div class="main-container">
@@ -30,22 +31,32 @@
             </div>
             <div class="canvas-buttons grid">
                 <input type="text" id="inputLine" name="inputLine" placeholder="Enter text here">
-                <button id="switchLine" onclick="switchLine()">⇕</button>
-                <button id="moveLineUp" onclick="moveLineUp()">⇧</button>
-                <button id="moveLineDown" onclick="moveLineDown()">⇩</button>
-                <button id="setAlignCenter" onclick="onSetAlign(this.id)">center</button>
-                <button id="setAlignLeft" onclick="onSetAlign(this.id)">←</button>
-                <button id="setAlignRight" onclick="onSetAlign(this.id)">→</button>
-                <button id="increaseFontSize" onclick="increaseFontSize()">+</button>
-                <button id="decreaseFontSize" onclick="decreaseFontSize()">−</button>
+                <button id="switchLine" onclick="switchLine()"></button>
+                <button id="moveLineUp" onclick="moveLineUp()"></button>
+                <button id="moveLineDown" onclick="moveLineDown()"></button>
+                <button id="setAlignCenter" onclick="onSetAlign(this.id)"></button>
+                <button id="setAlignLeft" onclick="onSetAlign(this.id)"></button>
+                <button id="setAlignRight" onclick="onSetAlign(this.id)"></button>
+                <button id="increaseFontSize" onclick="increaseFontSize()"></button>
+                <button id="decreaseFontSize" onclick="decreaseFontSize()"></button>
                 <input id="setColor" type="color" onclick="onGetColor()">
                 <form action="" id="shareForm" method="POST" enctype="multipart/form-data">
                     <input name="img" id="imgData" type="hidden" />
                 </form>
-                <button id="shareMeme" onclick="shareMeme(event)">Share</button>
-                <button id="saveMeme" onclick="saveMeme()">Save</button>
-                <a href="#" id="downloadMeme" onclick="downloadMeme(this)" download="myMeme.jpg">Download</a>
+                <button id="shareMeme" onclick="shareMeme(event)"></button>
+                <button id="saveMeme" onclick="saveMeme()"></button>
+                <a href="#" id="downloadMeme" onclick="downloadMeme(this)" download="myMeme.jpg"></a>
             </div>
+        </div>
+        <div class="about grid" style="display: none">
+            <img src="img/me.jpg" alt="">
+            <h4>Asaf Peretz - JavaScript newbie</h4>
+            <p>My name is Asaf Peretz im 31 years. I've worked in computer IT and System
+                since i finished the army in 2009 and now im looking to do a carrer change.
+            </p>
+            <a class="facebookLnk" href="https://www.facebook.com/asaf.perez.31"></a>
+            <a class="linkdinLnk" href="https://www.linkedin.com/in/asaf-peretz-b367a1ab"></a>
+        
         </div>
     </div>
 
